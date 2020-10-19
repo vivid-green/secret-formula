@@ -1,4 +1,7 @@
+DROP DATABASE IF EXISTS chum_bucket;
 
+CREATE DATABASE chum_bucket;
+USE chum_bucket;
 
 CREATE TABLE krabby_patty
 (
