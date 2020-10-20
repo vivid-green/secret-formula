@@ -1,11 +1,14 @@
 
 <div class="container">
   <div class="row justify-content-md-center">
-    <div class="col-md-auto">
+    <div class="col-md-auto uneaten">
         <h2>Patties to Devour: </h2>
         {{#each data}}
             {{#unless devoured}}
-                <p>{{this.name}}</p>
+                <p>
+                    {{this.name}}
+                    <button class="eat-patty" data-id="{{id}}">EAT ME!</button>
+                </p>
             {{/unless}}
         {{/each}}
     </div>

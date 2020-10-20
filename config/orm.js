@@ -19,6 +19,15 @@ var orm = {
         cb(result);
       });
     },
+    put: function(table, value, id, cb) {
+      var queryString = "UPDATE ?? SET devoured = ? WHERE id = ?;";
+      connection.query(queryString, [table, value, id], function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    },
 }
 
 module.exports = orm;
