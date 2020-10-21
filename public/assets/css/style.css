@@ -1,0 +1,22 @@
+.krabby-patty {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.eat-me:hover {
+    background-color: #0069D9;
+    color: white;
+}
+
+.jumbotron {
+    font-family: 'Stylish', sans-serif;
+}
+
+h2 {
+    font-family: 'Stylish', sans-serif;
+}
+
+.col-auto {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}

@@ -2,7 +2,7 @@ $(function() {
 
   const postPatty = (event) => {
     event.preventDefault();
-    const newPatty = {name: $("#cp").val().trim()};
+    const newPatty = {name: $("#cp").val()};
     $.ajax("/", {
         type: "POST",
         data: newPatty,
@@ -12,7 +12,7 @@ $(function() {
     });
   }
 
-  $(".eat-patty").click(function(event) {
+  $(".eat-me").click(function(event) {
     const id = $(this).data("id");
     $.ajax("/" + id, {
       type: "PUT",
