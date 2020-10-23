@@ -7,7 +7,7 @@ $(function() {
         type: "POST",
         data: newPatty,
         success: function(res) {
-          location.reload();
+          // location.reload();
         }
     });
   }
@@ -17,11 +17,17 @@ $(function() {
     $.ajax("/" + id, {
       type: "PUT",
       success: function(res) {
-        location.reload();
+        // location.reload();
       }
     });
   })
 
   $(".create-form").on("submit", postPatty);
+
+  $(".make-me").on("click", e => $('#makePatty').modal('toggle'));
+  $(".eat-me").on("click", e => $('#eatPatty').modal('toggle'));
+
+  $('#makePatty').on('hidden.bs.modal', e => location.reload());
+  $('#eatPatty').on('hidden.bs.modal', e => location.reload());
 
 });

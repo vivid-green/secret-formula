@@ -1,48 +1,88 @@
-<div class="jumbotron jumbotron-fluid text-center">
-  <div class="container">
-    <img class="krabby-patty" src="/assets/img/krabby_patty.gif" alt="Krabby Patty.">
-    <p class="lead">Help plankton crack the secret formula of the legendary Krabby Patty&trade;. Add some ingredients and handcraft a patty to please the masses. Every new patty needs a taste tester. Sink those teeth into the newly cooked patties and bring The Chum Bucket&trade; closer to that sweet, savory success!</p>
+<!-- Modal -->
+<div class="modal fade" id="eatPatty" tabindex="-1" role="dialog" aria-labelledby="eatPatty" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eatPatty">Three Hours Later...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="moduleImg img-fluid" src="/assets/img/planktoneating.gif" alt="Plankton eating a krabby patty.">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
-<div class="container">
-  <div class="row justify-content-md-center">
-    <div class="col-auto">
-        {{#if data}}
-            <h2>Click to Eat</h2>
-            {{#each data}}
-                {{#unless devoured}}
-                    <div class="list-group">
-                        <button type="button" class="list-group-item list-group-item-action eat-me" data-id={{this.id}}>
-                            {{this.name}}
-                        </button>
-                    </div>
-                {{/unless}}
-            {{/each}}
 
+<div class="modal fade" id="makePatty" tabindex="-1" role="dialog" aria-labelledby="makePatty" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="makePatty">One Hour Later...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img class="moduleImg img-fluid" src="/assets/img/makingpatty.gif" alt="Patty being made.">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
-    <div class="col-auto">
-        <h2>Patties Eaten</h2>
-        {{#each data}}
-            {{#if devoured}}
-            <ul class="list-group">
-                <li class="list-group-item">{{this.id}}. {{this.name}}</li>
-            </ul>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="display-4">Eat or Die!</h1>
+    <p class="lead">Help plankton crack the secret formula of the legendary Krabby Patty&trade;. Add some ingredients and handcraft a patty to please the masses. Every new patty needs a taste tester. Sink those teeth into the newly cooked patties and bring The Chum Bucket&trade; closer to that sweet, savory success!</p>
+    <hr class="my-4">
+    <img class="krabby-patty" src="/assets/img/krabby_patty.gif" alt="Krabby Patty.">
+  </div>
+</div>
+<div class="container content">
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <h2>Add Ingredient(s)</h2>
+            <form class="create-form">
+                <div class="form-group">
+                    <input type="text" id="cp" name="name" class="form-control" aria-label="Enter Ingredients(s)" aria-describedby="addon-wrapping">
+                </div>
+                <button class="btn btn-primary make-me" type="submit">Make Krabby Patty</button>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-auto">
+            {{#if data}}
+                <h2>Click to Eat</h2>
+                {{#each data}}
+                    {{#unless devoured}}
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action eat-me" data-id={{this.id}}>
+                                {{this.name}}
+                            </button>
+                        </div>
+                    {{/unless}}
+                {{/each}}
+
+        </div>
+        <div class="col-auto">
+            <h2>Patties Eaten</h2>
+            {{#each data}}
+                {{#if devoured}}
+                <ul class="list-group">
+                    <li class="list-group-item">{{this.id}}. {{this.name}}</li>
+                </ul>
+                {{/if}}
+            {{/each}}
             {{/if}}
-        {{/each}}
-        {{/if}}
+        </div>
     </div>
-  </div>
-  <div class="row justify-content-md-center">
-    <div class="col-12">
-        <h2>Add Ingredient(s)</h2>
-        <form class="create-form">
-            <div class="form-group">
-                <input type="text" id="cp" name="name" class="form-control" aria-label="Enter Ingredients(s)" aria-describedby="addon-wrapping">
-            </div>
-            <button class="btn btn-primary" type="submit">Make Krabby Patty</button>
-        </form>
-    </div>
-  </div>
 </div>
 
 

@@ -1,3 +1,11 @@
+body {
+    background: url(../img/spongebob-flower-sky-backgrounds.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .krabby-patty {
     border-radius: 10px;
     margin-bottom: 20px;
@@ -10,6 +18,7 @@
 
 .jumbotron {
     font-family: 'Stylish', sans-serif;
+    background-color: #ACD2C4;
 }
 
 h2 {
@@ -19,4 +28,12 @@ h2 {
 .col-auto {
     margin-right: 5rem;
     margin-left: 5rem;
+}
+
+.create-form {
+    margin-bottom: 5rem;
+}
+
+.moduleImg {
+    border-radius: 10px;
 }
