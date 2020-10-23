@@ -37,3 +37,7 @@ h2 {
 .moduleImg {
     border-radius: 10px;
 }
+
+.modal-content {
+    background-color: #9CBBE9;
+}
